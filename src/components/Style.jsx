@@ -20,7 +20,7 @@ const Style = () => {
     const [itemid, setItemid] = useState(0);
     const [pajamos, setPajamos] = useState(0);
     const [sidebar, setSidebar] = useState("1");
-    const [selectType, setSelectType] = useState(0);
+    const [selectType, setSelectType] = useState("0");
     const [budgetinput, setBudgetinput] = useState(0);
     const [outofbudget, setOutofbudget] = useState(false);
     const [deleatevalue, setDeleatevalue] = useState(0);
@@ -68,6 +68,7 @@ const Style = () => {
         dispatch({
             type: items[0] + "remove",
         });
+        setOutofbudget(false)
     }
     //UseReducer-------------------------------------------------------------------------------
     const initialState = {
@@ -135,7 +136,7 @@ const Style = () => {
                                     <InputSection setInput={setInput} handlesubmit={handlesubmit} input={input} outofbudget={outofbudget} />
                                 </div>
                                 <div>
-                                    <History handledeleate={handledeleate} />
+                                    <History handledeleate={handledeleate} selectType={selectType}/>
                                 </div>
                             </div>
                         </div>

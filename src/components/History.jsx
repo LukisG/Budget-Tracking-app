@@ -22,7 +22,7 @@ const History = ({ handledeleate, selectType }) => {
             <Card
               key={item[2] + 1}
               size="small"
-              title={selectType == 0 ? "" : item[0]}
+              title={item[0] == 0 ? `${index+1}. No Category` : item[0]}
               style={{ width: 300 }}
             >
               <p>

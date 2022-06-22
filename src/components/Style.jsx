@@ -26,8 +26,8 @@ const Style = () => {
     const [deleatevalue, setDeleatevalue] = useState(0);
     const [dispatchstate, setDispatchstate] = useState(false);
     //-------------------------------------------------------------
-    const handlesubmit = () => {
-        if (GlobalArray["budget"] > GlobalArray["total"]) {
+    const handlesubmit = async () => {
+        if (GlobalArray["budget"] > GlobalArray["total"] && input <= GlobalArray['budget']) {
             setOutofbudget(false);
             if (selectType !== 0) {
                 setDispatchstate(true)

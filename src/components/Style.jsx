@@ -79,36 +79,36 @@ const Style = () => {
         if (dispatchstate === true) {
             switch (action.type) {
                 case 'food':
-                    return GlobalArray["food"] += parseInt(input) / 2, setDispatchstate(false);
+                    return GlobalArray["food"] += parseInt(input) , setDispatchstate(false);
                 case 'transport':
-                    return GlobalArray["transport"] += parseInt(input) / 2, setDispatchstate(false)
+                    return GlobalArray["transport"] += parseInt(input) , setDispatchstate(false)
                 case 'entertainment':
-                    return GlobalArray["entertainment"] += parseInt(input) / 2, setDispatchstate(false)
+                    return GlobalArray["entertainment"] += parseInt(input) , setDispatchstate(false)
                 case 'rent':
-                    return GlobalArray["rent"] += parseInt(input) / 2, setDispatchstate(false)
+                    return GlobalArray["rent"] += parseInt(input) , setDispatchstate(false)
                 case 'gifts':
-                    return GlobalArray["gifts"] += parseInt(input) / 2, setDispatchstate(false)
+                    return GlobalArray["gifts"] += parseInt(input) , setDispatchstate(false)
                 case '0':
-                    return GlobalArray["nocategory"] += parseInt(input) / 2, setDispatchstate(false);
+                    return GlobalArray["nocategory"] += parseInt(input) , setDispatchstate(false);
                 //remove from history/update category-------------------------------------------------------------------------------
                 case 'foodremove':
-                    return GlobalArray["food"] -= parseInt(deleatevalue) / 2, GlobalArray["total"] -= parseInt(deleatevalue) / 2, setDispatchstate(false),
-                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) / 2 : GlobalArray["pajamos"] -= parseInt(deleatevalue) / 2
+                    return GlobalArray["food"] -= parseInt(deleatevalue), GlobalArray["total"] -= parseInt(deleatevalue), setDispatchstate(false),
+                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) : GlobalArray["pajamos"] -= parseInt(deleatevalue)
                 case 'transportremove':
-                    return GlobalArray["transport"] = GlobalArray["transport"] - parseInt(deleatevalue) / 2, GlobalArray["total"] -= parseInt(deleatevalue) / 2, setDispatchstate(false),
-                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) / 2 : GlobalArray["pajamos"] -= parseInt(deleatevalue) / 2
+                    return GlobalArray["transport"] = GlobalArray["transport"] - parseInt(deleatevalue), GlobalArray["total"] -= parseInt(deleatevalue), setDispatchstate(false),
+                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) : GlobalArray["pajamos"] -= parseInt(deleatevalue)
                 case 'entertainmentremove':
-                    return GlobalArray["entertainment"] -= parseInt(deleatevalue) / 2, GlobalArray["total"] -= parseInt(deleatevalue) / 2, setDispatchstate(false),
-                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) / 2 : GlobalArray["pajamos"] -= parseInt(deleatevalue) / 2
+                    return GlobalArray["entertainment"] -= parseInt(deleatevalue), GlobalArray["total"] -= parseInt(deleatevalue), setDispatchstate(false),
+                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) : GlobalArray["pajamos"] -= parseInt(deleatevalue)
                 case 'rentremove':
-                    return GlobalArray["rent"] -= parseInt(deleatevalue) / 2, GlobalArray["total"] -= parseInt(deleatevalue) / 2, setDispatchstate(false),
-                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) / 2 : GlobalArray["pajamos"] -= parseInt(deleatevalue) / 2
+                    return GlobalArray["rent"] -= parseInt(deleatevalue), GlobalArray["total"] -= parseInt(deleatevalue), setDispatchstate(false),
+                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) : GlobalArray["pajamos"] -= parseInt(deleatevalue)
                 case 'giftsremove':
-                    return GlobalArray["gifts"] -= parseInt(deleatevalue) / 2, GlobalArray["total"] -= parseInt(deleatevalue) / 2, setDispatchstate(false),
-                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) / 2 : GlobalArray["pajamos"] -= parseInt(deleatevalue) / 2
+                    return GlobalArray["gifts"] -= parseInt(deleatevalue), GlobalArray["total"] -= parseInt(deleatevalue), setDispatchstate(false),
+                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) : GlobalArray["pajamos"] -= parseInt(deleatevalue)
                 case '0remove':
-                    return GlobalArray["nocategory"] -= parseInt(deleatevalue) / 2, GlobalArray["total"] -= parseInt(deleatevalue) / 2, setDispatchstate(false),
-                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) / 2 : GlobalArray["pajamos"] -= parseInt(deleatevalue) / 2
+                    return GlobalArray["nocategory"] -= parseInt(deleatevalue), GlobalArray["total"] -= parseInt(deleatevalue), setDispatchstate(false),
+                        deleatevalue < 0 ? GlobalArray["islaidos"] -= parseInt(deleatevalue) : GlobalArray["pajamos"] -= parseInt(deleatevalue)
                 default:
                     return
             }
